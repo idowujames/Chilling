@@ -89,7 +89,7 @@ export default function ContactSection() {
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-primary mr-4" />
                   <div>
-                    <div className="font-semibold text-secondary-foreground">Email</div>
+                    <div className="font-semibold text-foreground">Email</div>
                     <div className="text-muted-foreground">tunde@chillsbrand.com</div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function ContactSection() {
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-primary mr-4" />
                   <div>
-                    <div className="font-semibold text-secondary-foreground">Phone</div>
+                    <div className="font-semibold text-foreground">Phone</div>
                     <div className="text-muted-foreground">+234 (0) 803-407-9153</div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-primary mr-4" />
                   <div>
-                    <div className="font-semibold text-secondary-foreground">Location</div>
+                    <div className="font-semibold text-foreground">Location</div>
                     <div className="text-muted-foreground">Lagos, Nigeria & London, UK</div>
                   </div>
                 </div>

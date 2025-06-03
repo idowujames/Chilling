@@ -83,7 +83,7 @@ export default function ProjectsSection() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-bold mb-3 text-secondary-foreground">
+                  <h3 className="text-xl font-montserrat font-bold mb-3 text-foreground">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
@@ -106,7 +106,7 @@ export default function ProjectsSection() {
             <h3 className="text-3xl font-montserrat font-bold mb-6 text-accent">
               Industry Leadership
             </h3>
-            <p className="text-lg text-secondary-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
               Beyond individual projects, Tunde has held executive positions at leading industry organizations, 
               including Head of Operations at Azuri Music, Head of PR & Marketing at DSE Africa, 
               and Associate Producer at TooXclusive, bringing strategic vision and operational excellence to every role.

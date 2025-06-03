@@ -38,7 +38,7 @@ export default function AboutSection() {
             <h3 className="text-2xl font-montserrat font-semibold mb-4 text-primary">
               Tunde Chilin
             </h3>
-            <p className="text-lg text-secondary-foreground mb-6 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               With over 5 years in the Nigerian music industry, Tunde has emerged as a versatile professional excelling in Music PR, Tour Management, Talent Management, and executive positions. His journey demonstrates unwavering passion for music and relentless pursuit of excellence.
             </p>
             
