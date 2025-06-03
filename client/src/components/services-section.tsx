@@ -34,8 +34,9 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-background relative overflow-hidden">
+      <div className="floating-shapes"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-accent">
             Services
@@ -53,14 +54,23 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="group"
             >
-              <Card className="bg-secondary border-border hover:border-primary transition-all duration-300 card-hover h-full">
-                <CardContent className="p-8 text-center">
-                  <service.icon className="w-12 h-12 text-primary mb-4 mx-auto" />
-                  <h3 className="text-xl font-montserrat font-semibold mb-3 text-foreground">
+              <Card className="bg-secondary border-border hover:border-primary transition-all duration-500 card-hover h-full relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-8 text-center relative z-10">
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-block"
+                  >
+                    <service.icon className="w-12 h-12 text-primary mb-4 mx-auto group-hover:text-accent transition-colors duration-300" />
+                  </motion.div>
+                  <h3 className="text-xl font-montserrat font-semibold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     {service.description}
                   </p>
                 </CardContent>

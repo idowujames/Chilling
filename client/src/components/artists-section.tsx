@@ -50,8 +50,9 @@ export default function ArtistsSection() {
   ];
 
   return (
-    <section id="artists" className="py-20 bg-secondary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="artists" className="py-20 bg-secondary relative overflow-hidden">
+      <div className="absolute inset-0 geometric-bg"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-accent">
             Our Artist Roster
@@ -69,42 +70,83 @@ export default function ArtistsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ y: -15, rotateX: 5 }}
+              className="group perspective-1000"
             >
-              <Card className="bg-background border-border hover:border-primary transition-all duration-300 card-hover overflow-hidden">
-                <div className="relative">
-                  <img
+              <Card className="bg-background border-border hover:border-primary transition-all duration-500 card-hover overflow-hidden relative">
+                <div className="relative overflow-hidden">
+                  <motion.img
                     src={artist.image}
                     alt={artist.name}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-64 object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.7 }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-bold mb-2 text-foreground">
-                    {artist.name}
-                  </h3>
-                  <p className="text-primary font-medium mb-2">
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 0.3 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <motion.div
+                    className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold"
+                    initial={{ x: 100, opacity: 0 }}
+                    whileHover={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {artist.genre}
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-4">
+                  </motion.div>
+                </div>
+                <CardContent className="p-6 relative">
+                  <motion.h3 
+                    className="text-xl font-montserrat font-bold mb-2 text-foreground group-hover:text-primary transition-colors duration-300"
+                    whileHover={{ x: 5 }}
+                  >
+                    {artist.name}
+                  </motion.h3>
+                  <p className="text-muted-foreground text-sm mb-4 group-hover:text-foreground transition-colors duration-300">
                     {artist.achievement}
                   </p>
-                  <div className="flex justify-between items-center">
+                  <motion.div 
+                    className="flex justify-between items-center"
+                    initial={{ y: 20, opacity: 0 }}
+                    whileHover={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <div className="flex space-x-3">
-                      <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                      <motion.a 
+                        href="#" 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        whileHover={{ scale: 1.2, rotate: 15 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
                         <Music className="w-4 h-4" />
-                      </a>
-                      <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                      </motion.a>
+                      <motion.a 
+                        href="#" 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        whileHover={{ scale: 1.2, rotate: 15 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
                         <ExternalLink className="w-4 h-4" />
-                      </a>
-                      <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                      </motion.a>
+                      <motion.a 
+                        href="#" 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        whileHover={{ scale: 1.2, rotate: 15 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
                         <Users className="w-4 h-4" />
-                      </a>
+                      </motion.a>
                     </div>
-                    <span className="text-accent text-sm font-semibold">
+                    <motion.span 
+                      className="text-accent text-sm font-semibold"
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
                       {artist.streams}
-                    </span>
-                  </div>
+                    </motion.span>
+                  </motion.div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -112,12 +154,17 @@ export default function ArtistsSection() {
         </div>
 
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            View Full Roster
-          </Button>
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold glow-effect"
+            >
+              View Full Roster
+            </Button>
+          </motion.div>
         </div>
       </div>
     </section>
