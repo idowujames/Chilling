@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 Elite Music Management. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2024 Chills Brand. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>
