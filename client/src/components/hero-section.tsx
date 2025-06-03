@@ -12,7 +12,9 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden hero-bg">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')] bg-cover bg-center opacity-10" />
+      <div className="floating-shapes"></div>
+      <div className="absolute inset-0 geometric-bg"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')] bg-cover bg-center opacity-5" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
@@ -31,22 +33,39 @@ export default function HeroSection() {
             Over 5 years of excellence in the Nigerian music industry. Elevating careers through strategic PR, tour management, and industry leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
-              onClick={() => scrollToSection("#artists")}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View Our Artists
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg font-semibold"
-              onClick={() => scrollToSection("#contact")}
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold glow-effect"
+                onClick={() => scrollToSection("#artists")}
+              >
+                View Our Artists
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Get In Touch
-            </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg font-semibold"
+                onClick={() => scrollToSection("#contact")}
+              >
+                Get In Touch
+              </Button>
+            </motion.div>
           </div>
+          
+          <motion.div 
+            className="mt-8 music-wave w-32 mx-auto"
+            initial={{ width: 0 }}
+            animate={{ width: 128 }}
+            transition={{ duration: 2, delay: 1 }}
+          />
         </motion.div>
       </div>
 

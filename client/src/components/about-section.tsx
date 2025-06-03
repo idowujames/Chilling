@@ -10,20 +10,26 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-secondary relative overflow-hidden">
+      <div className="absolute inset-0 geometric-bg"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+            className="group"
           >
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
-              alt="Tunde Chilin Portrait"
-              className="rounded-2xl shadow-2xl w-full h-auto"
-            />
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+                alt="Tunde Chilin Portrait"
+                className="rounded-2xl shadow-2xl w-full h-auto transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
           </motion.div>
           
           <motion.div
@@ -50,12 +56,17 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  className="text-center cursor-pointer group"
                 >
-                  <div className="text-3xl font-bold text-accent mb-2">
+                  <motion.div 
+                    className="text-3xl font-bold text-accent mb-2 group-hover:text-primary transition-colors duration-300"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                  >
                     {stat.number}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
+                  </motion.div>
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     {stat.label}
                   </div>
                 </motion.div>
