@@ -6,23 +6,23 @@ export default function ServicesSection() {
   const services = [
     {
       icon: Handshake,
-      title: "Brand Partnership",
-      description: "Strategic partnerships and endorsement deals that align with your artistic vision and expand your reach.",
-    },
-    {
-      icon: Music,
-      title: "Music Licensing",
-      description: "Maximize revenue through strategic placement in films, TV shows, commercials, and digital platforms.",
+      title: "Music PR & Promotion",
+      description: "Strategic PR campaigns leveraging traditional and digital media to maximize exposure and engagement.",
     },
     {
       icon: Mic,
-      title: "Performance & Tours",
-      description: "Complete tour management from venue booking to logistics, ensuring memorable live experiences.",
+      title: "Tour Management",
+      description: "Complete tour logistics from UK to Nigeria, ensuring seamless operations and unforgettable experiences.",
+    },
+    {
+      icon: Trophy,
+      title: "Talent Management",
+      description: "Comprehensive artist development through The Chills Brand, nurturing careers and artistic visions.",
     },
     {
       icon: Video,
-      title: "Content Production",
-      description: "High-quality music videos, promotional content, and digital assets that capture your unique style.",
+      title: "Industry Executive",
+      description: "Operations leadership and strategic guidance backed by experience at top music industry companies.",
     },
   ];
 
@@ -38,10 +38,10 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-accent">
-            Our Services
+            Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive management solutions designed to elevate your music career to new heights
+            Strategic music industry solutions from PR campaigns to tour management and talent development
           </p>
         </div>
         

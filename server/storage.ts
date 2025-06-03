@@ -33,25 +33,46 @@ export class MemStorage implements IStorage {
   private seedArtists() {
     const sampleArtists: InsertArtist[] = [
       {
-        name: "Maya Chen",
-        genre: "R&B/Soul",
-        achievement: "Grammy-nominated artist with 3 platinum albums",
+        name: "T-Classic",
+        genre: "Afrobeats",
+        achievement: "Breakout hit 'Fall in Love' - major streaming success",
+        streams: "50M+ streams",
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      },
+      {
+        name: "Spyro",
+        genre: "Afrobeats",
+        achievement: "Multiple breakout songs and UK tour success",
+        streams: "40M+ streams",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      },
+      {
+        name: "Baby Boy AV",
+        genre: "Hip-Hop/Rap",
+        achievement: "Hit single 'Big Thug Boys' and international recognition",
+        streams: "30M+ streams",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      },
+      {
+        name: "Teni",
+        genre: "Afropop",
+        achievement: "Headline shows across Nigeria and UK tours",
         streams: "100M+ streams",
         image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       },
       {
-        name: "Alex Rivera",
-        genre: "Hip-Hop",
-        achievement: "Billboard Top 10 hits and sold-out world tour",
-        streams: "250M+ streams",
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        name: "Kida Kudz",
+        genre: "Afrobeats/Hip-Hop",
+        achievement: "Successful headline show in Ibadan and UK presence",
+        streams: "25M+ streams",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       },
       {
-        name: "Luna Martinez",
-        genre: "Pop/Electronic",
-        achievement: "Multi-platinum debut album and international recognition",
-        streams: "180M+ streams",
-        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        name: "Victor AD",
+        genre: "Afrobeats",
+        achievement: "Headline show in Warri and growing fanbase",
+        streams: "35M+ streams",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       },
     ];
 
@@ -80,8 +101,12 @@ export class MemStorage implements IStorage {
   async createContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
     const id = this.currentContactId++;
     const message: ContactMessage = {
-      ...insertMessage,
       id,
+      name: insertMessage.name,
+      email: insertMessage.email,
+      genre: insertMessage.genre || null,
+      experience: insertMessage.experience || null,
+      message: insertMessage.message,
       createdAt: new Date(),
     };
     this.contactMessages.set(id, message);
