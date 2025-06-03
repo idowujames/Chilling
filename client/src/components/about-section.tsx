@@ -3,10 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutSection() {
   const stats = [
-    { number: "50+", label: "Artists Managed" },
-    { number: "12", label: "Platinum Records" },
-    { number: "15+", label: "Years Experience" },
-    { number: "25", label: "Industry Awards" },
+    { number: "20+", label: "Artists Managed" },
+    { number: "10+", label: "Major Tours" },
+    { number: "5+", label: "Years Experience" },
+    { number: "15+", label: "Successful Campaigns" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function AboutSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
-              alt="Music Manager Portrait"
+              alt="Tunde Chilin Portrait"
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </motion.div>
@@ -36,10 +36,10 @@ export default function AboutSection() {
               Meet Your Manager
             </h2>
             <h3 className="text-2xl font-montserrat font-semibold mb-4 text-primary">
-              Marcus Johnson
+              Tunde Chilin
             </h3>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              With over 15 years in the music industry, Marcus has guided artists from emerging talent to Grammy winners. His strategic approach combines traditional industry knowledge with cutting-edge digital marketing to maximize artist potential.
+            <p className="text-lg text-secondary-foreground mb-6 leading-relaxed">
+              With over 5 years in the Nigerian music industry, Tunde has emerged as a versatile professional excelling in Music PR, Tour Management, Talent Management, and executive positions. His journey demonstrates unwavering passion for music and relentless pursuit of excellence.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">

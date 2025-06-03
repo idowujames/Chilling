@@ -5,10 +5,10 @@ import { Menu, Music } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Our Services", href: "#services" },
-  { name: "Careers", href: "#artists" },
-  { name: "Blog", href: "#blog" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Artists", href: "#artists" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -30,7 +30,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="text-2xl font-montserrat font-bold text-accent flex items-center">
               <Music className="mr-2 h-6 w-6" />
-              MAVIN
+              CHILLS
             </div>
           </div>
           

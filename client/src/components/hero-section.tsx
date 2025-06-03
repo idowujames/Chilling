@@ -22,13 +22,13 @@ export default function HeroSection() {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-5xl md:text-7xl font-montserrat font-bold mb-6 leading-tight">
-            Elite Music{" "}
+            Music PR & Talent{" "}
             <span className="gradient-text">
               Management
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light leading-relaxed max-w-3xl mx-auto">
-            Elevating careers, crafting legacies. Professional talent management for the music industry's finest artists.
+            Over 5 years of excellence in the Nigerian music industry. Elevating careers through strategic PR, tour management, and industry leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
