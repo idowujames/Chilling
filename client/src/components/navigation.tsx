@@ -36,7 +36,7 @@ export default function Navigation() {
   return (
     <motion.header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/98 backdrop-blur-md shadow-lg' : 'bg-background/95 backdrop-blur-sm'
+        scrolled ? 'glass-effect shadow-2xl shadow-primary/10' : 'bg-background/90 backdrop-blur-sm'
       } border-b border-border`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
