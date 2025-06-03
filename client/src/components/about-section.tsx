@@ -14,9 +14,9 @@ export default function AboutSection() {
       <div className="section-divider"></div>
       <section id="about" className="py-20 bg-secondary/30 relative overflow-hidden">
         <div className="absolute inset-0 geometric-bg"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -91,6 +91,5 @@ export default function AboutSection() {
       </div>
     </section>
     </>
-    
   );
 }
