@@ -34,8 +34,10 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
-      <div className="floating-shapes"></div>
+    <>
+      <div className="section-divider"></div>
+      <section id="services" className="py-20 bg-background relative overflow-hidden">
+        <div className="floating-shapes"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-accent">
@@ -112,5 +114,6 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
